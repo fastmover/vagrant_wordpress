@@ -1,0 +1,46 @@
+{
+  "name": "parse/demo",
+  "description": "Parse: Demo",
+  "license": "proprietary",
+
+  "repositories": [
+    { "type":"composer", "url":"http://wpackagist.org" },
+
+    { "type": "package",
+      "package" : {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "3.7.1",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/3.7.1.zip"
+       },
+        "require" : {
+          "fancyguy/webroot-installer": "1.1.0"
+        }
+      }
+    }
+  ],
+
+  "require": {
+    "composer/installers": "1.0.x-dev",
+    "wordpress": "3.7.1",
+    "wpackagist/mp6": "~2.1"
+  },
+
+  "require-dev": {
+    "wpackagist/debug-bar": "~0.8",
+    "wpackagist/debug-bar-console": "~0.3"
+  },
+
+  "minimum-stability": "dev",
+
+  "extra": {
+    "wp-content": "public/wp-content",
+    "webroot-dir": "public/wp",
+    "webroot-package": "wordpress",
+    "installer-paths": {
+      "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  }
+}
