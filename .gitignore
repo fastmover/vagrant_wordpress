@@ -41,3 +41,4 @@ dwsync.xml
 composer.phar
 composer.lock
 node_modules
+/www/public
