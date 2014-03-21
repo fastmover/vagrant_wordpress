@@ -12,7 +12,7 @@ From here you can run the wordpress install using mysql database:
 
     Username: root
     Password:
-    Database: database
+    Database: wordpress
     host: localhost
     
 
